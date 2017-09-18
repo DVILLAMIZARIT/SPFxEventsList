@@ -1,0 +1,54 @@
+/* Using panels to display blog date */
+
+ul {
+  padding: 0;
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.panel.date {
+  margin: 0px;
+  width: 60px;
+  text-align: center;
+}
+
+.panel-title{
+  text-align: center;
+}
+
+.panel.date .month {
+  padding: 2px 0px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.panel.date .day {
+  padding: 3px 0px;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.item {
+  border: 1px solid #3591bb !important;
+  border-radius: 3px;
+  margin-bottom: 17px;
+}

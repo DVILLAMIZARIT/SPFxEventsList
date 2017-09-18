@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "events-list-client-side-solution",
+    "id": "99a6ba26-34f5-4e62-badd-c213b17629ec",
+    "version": "1.0.0.0",
+    "skipFeatureDeployment": false
+  },
+  "paths": {
+    "zippedPackage": "solution/events-list.sppkg"
+  }
+}
