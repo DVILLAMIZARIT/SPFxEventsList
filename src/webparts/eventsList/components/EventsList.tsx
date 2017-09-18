@@ -24,10 +24,7 @@ export default class EventsList extends React.Component<IEventsListProps, any> {
   }
 
   async componentWillReceiveProps(newProps) {
-    console.log(newProps)
-    this.setState({
-      top: newProps.initialItems
-    })
+
     this.getDataFromList(newProps.list);
     
   }
@@ -47,9 +44,10 @@ export default class EventsList extends React.Component<IEventsListProps, any> {
       let Events: Array<IEvent> = new Array<IEvent>(); 
 
       items.forEach(item => {
-        let dateCalendar = moment(item.Date).calendar();
+        console.log(item);
+        let dateCalendar = moment(item.Date).format('L');
         let month = moment(item.Date).format('MMM');
-        let day = dateCalendar.split('/')[1];
+        let day = dateCalendar.split('/')[0];
 
         let event: IEvent = {
           Title: item.Title,
@@ -128,6 +126,7 @@ export default class EventsList extends React.Component<IEventsListProps, any> {
 
 
   _handleClickShowMore = (e) =>{
+    console.log(this.state);console.log(this.props);
     this.setState({
       top: this.state.top + this.props.showMore
     }, () =>{

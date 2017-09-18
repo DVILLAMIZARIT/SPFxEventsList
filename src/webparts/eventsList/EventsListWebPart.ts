@@ -44,7 +44,6 @@ export default class EventsListWebPart extends BaseClientSideWebPart<IEventsList
       {
         list: this.properties.list,
         showMore: this.properties.showMore,
-        InitialItems: this.properties.initialItems
       }
     );
 
@@ -69,14 +68,10 @@ export default class EventsListWebPart extends BaseClientSideWebPart<IEventsList
                 PropertyPaneTextField('list', {
                   label: 'Lista de Eventos'
                 }),
-                PropertyPaneSlider('initialItems', {
-                  label: 'Número de eventos',
-                  min: 0,
-                  max: 10
-                }),
                 PropertyPaneSlider('showMore', {
                   label: 'Número mostrar más',
                   min: 0,
+                  
                   max: 10
                 })
 
